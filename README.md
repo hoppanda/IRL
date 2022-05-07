@@ -1,7 +1,8 @@
-# Pharma0001
-Pub: Establish a control limit at release for stability risk
+# R Script to reproduce the results in IRL paper
 
-This project contains code for a publication. 
-The concerned task is to establish internal release limit for controling stability risk.
+Pub: Setting the Control Limit at Release for Stability Assurance
+Submitted to [Pharmaceutical Statistics](https://onlinelibrary.wiley.com/journal/15391612), 2022 Feb
 
-Files to be included are the following. 
+The repo contains the source R code to reproduce the result in the above publication.
+A R package may be created in future if there is enough interests. 
+Please feel free to submit "Issue" in this repo if you have questions or comments on the code.
