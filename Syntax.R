@@ -357,15 +357,15 @@ launch_shinystan(out1d$mcmc)
 launch_shinystan(out2d$mcmc)
 
 # make plot 
-leg1=c(paste("ADG =",round(out1d$adg.irl,2)),
-       paste("CoT =",round(out1d$cot.irl,2)),
-       paste("CoI-B1 =",round(out1d$coi.b1,2)),
-       paste("CoI-B2 =",round(out1d$coi.b2,2))
+leg1=c(paste("ADG =",round(out1b$adg.irl,2)),
+       paste("CoT =",round(out1b$cot.irl,2)),
+       paste("CoI-B1 =",round(out1b$coi.b1,2)),
+       paste("CoI-B2 =",round(out1b$coi.b2,2))
 )
-leg2=c(paste("ADG =",round(out2d$adg.irl,2)),
-       paste("CoT =",round(out2d$cot.irl,2)),
-       paste("CoI-B1 =",round(out2d$coi.b1,2)),
-       paste("CoI-B2 =",format(round(out2d$coi.b2,2),nsmall=2))
+leg2=c(paste("ADG =",round(out2b$adg.irl,2)),
+       paste("CoT =",round(out2b$cot.irl,2)),
+       paste("CoI-B1 =",round(out2b$coi.b1,2)),
+       paste("CoI-B2 =",format(round(out2b$coi.b2,2),nsmall=2))
 )
 #windows(width=9,height=3)
 png(file="Figure_4.png",width=1500, height=660,type="quartz",pointsize=25)
