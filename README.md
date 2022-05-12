@@ -1,6 +1,7 @@
 # R Script to reproduce the results in IRL paper
 
 Pub: Setting the Control Limit at Release for Stability Assurance
+
 Submitted to [Pharmaceutical Statistics](https://onlinelibrary.wiley.com/journal/15391612), 2022 Feb
 
 The repo contains the source R code to reproduce the result in the above publication.
