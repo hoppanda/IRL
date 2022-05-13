@@ -311,6 +311,15 @@ corrplot(as.matrix(zz),col=coul,order="original",is.corr=F,na.label="X",
 (sce.u1=setup(a=NA,b=NA,b.sd=0.01,a.sd=0.5,rho=0.8,p0=0.9999,p1=0.9,lower=95,sl=36))
 (sce.u2=setup(a=NA,b=NA,b.sd=0.04,a.sd=0.5,rho=0.4,p0=0.9999,p1=0.9,lower=95,sl=36))
 
+#:-> Graphical illustration of different prior for SD parameters 
+# note that inverse gamma is for variance not SD
+library(invgamma)
+curve(dcauchy(x,0,0.1),from=0,to=5,n=500,col="navyblue",ylab="probability density",xlab="sigma")
+curve(dcauchy(x,0,0.01),from=0,to=5,n=500,col="coral2",lty=2,add=T)
+curve(dinvgamma(x,0.001,0.001),from=0,to=5,n=500,col="dodgerblue",lty=4,add=T)
+legend("topright",bty="n",legend=c("Half-Cauchy(0,0.1)","Half-Cauchy(0,0.01)","Inv-Gamma(0.001,0.001)"),
+       col=c("navyblue","coral2","dodgerblue"),lty=c(1,2,4))
+
 #:-> Solution in Stan
 out1=output(sce.u1,xgrid=seq(90,105,length=100))
 out2=output(sce.u2,xgrid=seq(85,115,length=100))
